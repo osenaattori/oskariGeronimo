@@ -1,3 +1,4 @@
+import {} from './index';
 import React from 'react';
 import { Box, Text, Link, VStack, Code, Grid, Button } from '@chakra-ui/react';
 import { ColorModeSwitcher } from '../../ColorModeSwitcher';
@@ -19,18 +20,27 @@ function Main() {
         <ColorModeSwitcher justifySelf="flex-end" />
         <VStack spacing={8}>
           <Text>
-            Hieno Geronimo nettisivu, tehty Reactilla ja{' '}
-            <Code> ChakraUi. </Code>
+            Nettisivu, tehty Reactilla ja <Code> ChakraUi. </Code>
           </Text>
           <Link
+            textShadow="dark-lg"
             fontFamily="monospace"
             color="green.700"
             href="https://oskari.vercel.app/"
+            fontSize="32px"
           >
             Linkki nettisivuuni 😀
           </Link>
+
+          <Box bg="blue.600" w={[100, 300, 300]}>
+            <a href="https://www.youtube.com/watch?v=BrcugNqRwUs">:) </a>
+          </Box>
         </VStack>
-        <Button onClick={() => navigate('/video')}> lol</Button>
+        <Button onClick={() => navigate('/video')}> Video React.js</Button>
+
+        <VStack>
+          <Button onClick={() => navigate('/news')}> Uutiset </Button>
+        </VStack>
       </Grid>
     </Box>
   );
